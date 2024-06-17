@@ -1,0 +1,23 @@
+@model LibraryManagement.Models.Author
+
+<h2>Edit Author</h2>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="AuthorId" class="control-label"></label>
+        <input asp-for="AuthorId" class="form-control" />
+        <span asp-validation-for="AuthorId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

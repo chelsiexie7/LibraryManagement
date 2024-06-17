@@ -1,0 +1,31 @@
+@model List<LibraryManagement.ViewModels.BookViewModel>
+
+<h2>Library Management Book</h2>
+<a href="@Url.Action("Create", "Book")" class="btn btn-primary">Create Book</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>BookId</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Branch</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BookId</td>
+                <td>@book.Title</td>
+                <td>@book.Name</td>
+                <td>@book.BranchName</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Book", new { id = book.BookId })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", "Book", new { id = book.BookId })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
