@@ -38,27 +38,27 @@
  - Library Branch page
  - Customer page
 
-3. CRUD Functionality
-    3.1 **Read** On each page, you can view a list of existing data.
-    3.2 **Create** 
-    Click the *Create* button to create new data. 
-    Fill in the form and click the *Submit* button to save the new data.
-    3.3 **Edit** 
-    Click the *Edit* button to modify the selected information. 
-    Modify the form information and click the *Submit* button to save the changes. 
-    If you do not want to modify the information anymore, you can click *back to list* button.
-    3.4 **Delete** 
-    Click the *Delete* button to delete the data with the corresponding ID. 
-    The system will jump to a confirmation window, and you can choose yes and no.
+3. CRUD Functionality  
+    3.1 **Read** On each page, you can view a list of existing data.  
+    3.2 **Create**   
+    Click the *Create* button to create new data.   
+    Fill in the form and click the *Submit* button to save the new data.  
+    3.3 **Edit**   
+    Click the *Edit* button to modify the selected information.  
+    Modify the form information and click the *Submit* button to save the changes.  
+    If you do not want to modify the information anymore, you can click *back to list* button.   
+    3.4 **Delete**   
+    Click the *Delete* button to delete the data with the corresponding ID.   
+    The system will jump to a confirmation window, and you can choose yes and no.  
     3.5. **Special Functionality** 
-    When creating a Book, enter the Author ID and Branch ID. 
-    When reading the book list, the Author Name and Branch Name will be displayed for the convenience of reader.
-    3.6 **Error Handling** 
-    While creating and editing process, if new id repeats with another existing id, error notice will appear.
-
-4. Return to List
+    When creating a Book, enter the Author ID and Branch ID.  
+    When reading the book list, the Author Name and Branch Name will be displayed for the convenience of reader.  
+    3.6 **Error Handling**   
+    While creating and editing process, if new id repeats with another existing id, error notice will appear.  
+  
+5. Return to List  
     Click the *Back to List* button to return to the list page of Book, Author, Library Branch, or Customer.
 
-5. Return to Home Page
+6. Return to Home Page
     Click the Library Management title to return to the home page.
 
