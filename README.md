@@ -1,4 +1,4 @@
-# Library Management, CHI XIE, stuId 2052833
+# Library Management
 
 ## Prerequisites
 1. Entity Framework installed on your machine
