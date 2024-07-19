@@ -8,7 +8,6 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Created At</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -18,7 +17,6 @@
             <tr>
                 <td>@libraryBranch.LibraryBranchId</td>
                 <td>@libraryBranch.BranchName</td>
-                <td>@libraryBranch.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
                 <td>
                     <a href="@Url.Action("Edit", "LibraryBranch", new { id = libraryBranch.LibraryBranchId })" class="btn btn-warning">Edit</a>
                     <a href="@Url.Action("Delete", "LibraryBranch", new { id = libraryBranch.LibraryBranchId })" class="btn btn-danger">Delete</a>
@@ -27,3 +25,7 @@
         }
     </tbody>
 </table>
+
+@{
+        throw new Exception("This is a deliberate exception for testing purposes.");
+    }

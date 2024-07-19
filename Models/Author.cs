@@ -8,7 +8,6 @@ public class Author{
     [Key]
     public required int AuthorId { get; set; }
     public required string Name { get; set; }
-    public DateTime CreatedAt{get; set;}
 
 }
 }

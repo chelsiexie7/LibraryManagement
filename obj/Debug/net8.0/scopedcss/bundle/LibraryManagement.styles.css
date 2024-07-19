@@ -47,3 +47,65 @@ button.accept-policy[b-ntohq707r3] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+/* Custom styles for the review section */
+.review-section[b-ntohq707r3] {
+    text-align: center;
+    color: #9B2D30;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.review-section .quote[b-ntohq707r3] {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 20px 0;
+    color: #9B2D30;
+}
+
+.review-section .author[b-ntohq707r3] {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #9B2D30;
+}
+
+.review-section .author-subtext[b-ntohq707r3] {
+    font-size: 1rem;
+    color: #9B2D30;
+}
+
+.review-section .reviewers[b-ntohq707r3] {
+    font-size: 1.1rem;
+    font-weight: bold; /* Make the reviewers bold */
+    color: #9B2D30;
+    margin: 10px 0;
+}
+
+.review-section hr[b-ntohq707r3] {
+    border: 0;
+    height: 1px;
+    background-color: #9B2D30;
+    opacity: 0.5;
+    margin: 20px 0;
+}
+
+/* Navbar custom styles */
+.navbar[b-ntohq707r3] {
+    background-color: #9B2D30 !important;
+    color: #ffffff !important;
+}
+
+.navbar .nav-link[b-ntohq707r3] {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* Additional text colors */
+.text-reviews-color[b-ntohq707r3] {
+    color: #9B2D30;
+}
+
+.text-oscar-color[b-ntohq707r3] {
+    color: #9B2D30;
+}

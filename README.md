@@ -33,10 +33,11 @@
  - Customer
 
 2. Page Navigation: Clicking on the buttons in the navigation bar will take you to the respective pages:
- - Book page
- - Author page
- - Library Branch page
- - Customer page
+ - Book page [Readable without login]
+ - Author page  [Readable without login]
+ - Library Branch page  [Readable without login]
+ - Customer page  [Non-readable without login to protect customers' privacy]
+ - Register Page, Login Page, Logout Page, Account Manage Page
 
 3. CRUD Functionality
     3.1 **Read** On each page, you can view a list of existing data.
@@ -59,6 +60,10 @@
 4. Return to List
     Click the *Back to List* button to return to the list page of Book, Author, Library Branch, or Customer.
 
-5. Return to Home Page
+5. Social Media Account Authentication
+    The user can register or login through their Facebook or Google account(s). 
+    After registering, please click the "comfirm register" button to manually validate e-mail address. This function will be updated in the further version.
+
+6. Return to Home Page
     Click the Library Management title to return to the home page.
 

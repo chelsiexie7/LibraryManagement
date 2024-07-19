@@ -3,8 +3,11 @@ using System.Linq;
 //LibraryBranchController.cs
 using Microsoft.AspNetCore.Mvc;
 using LibraryManagement.Models;
+using LibraryManagement.Data;
+
 
 namespace LibraryManagement.Controllers{
+
     public class LibraryBranchController : Controller{
         private readonly AppDbContext _dbContext;
         public LibraryBranchController(AppDbContext dbContext){
@@ -14,23 +17,26 @@ namespace LibraryManagement.Controllers{
             var libraryBranches = _dbContext.LibraryBranches.ToList();
             return View(libraryBranches);
         }
+
         public IActionResult Create(){
         return View();
         }
         [HttpPost]
+
         public IActionResult Create(LibraryBranch libraryBranch){
             if(_dbContext.LibraryBranches.Any(a => a.LibraryBranchId == libraryBranch.LibraryBranchId)){
                 ModelState.AddModelError("LibraryBranchId", "Error: Id repeats.");
                 return View(libraryBranch);
                 }
 
-            libraryBranch.CreatedAt = DateTime.Now;
+            
             _dbContext.LibraryBranches.Add(libraryBranch);
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
         [Route("LibraryBranch/Edit/{id}")]
+
         public IActionResult Edit(int id){
             var libraryBranch = _dbContext.LibraryBranches.Find(id);
             if (libraryBranch == null){
@@ -41,6 +47,7 @@ namespace LibraryManagement.Controllers{
 
         [HttpPost]
         [Route("LibraryBranch/Edit/{id}")]
+   
          public IActionResult Edit(int id, LibraryBranch libraryBranch){
             if (!ModelState.IsValid){
                 return View(libraryBranch);
@@ -61,7 +68,7 @@ namespace LibraryManagement.Controllers{
                 _dbContext.LibraryBranches.Remove(existingLibraryBranch);
                 _dbContext.SaveChanges();
 
-                libraryBranch.CreatedAt = existingLibraryBranch.CreatedAt; // 保持创建时间一致
+                
                 _dbContext.LibraryBranches.Add(libraryBranch);
             }else{
                 existingLibraryBranch.LibraryBranchId = libraryBranch.LibraryBranchId; // 更新ID
@@ -71,6 +78,7 @@ namespace LibraryManagement.Controllers{
 
             return RedirectToAction("Index");
         }
+ 
         public IActionResult Delete(int id){
             var libraryBranch = _dbContext.LibraryBranches.Find(id);
             if (libraryBranch == null){
@@ -80,6 +88,7 @@ namespace LibraryManagement.Controllers{
         }
 
         [HttpPost, ActionName("Delete")]
+
         public IActionResult DeleteConfirmed(int id){
             var libraryBranch = _dbContext.LibraryBranches.Find(id);
             if (libraryBranch == null){

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/chelsie/Desktop/Application-6809 /LibraryManagement/LibraryManagement.csproj": {}
+    "/Users/chelsie/Desktop/Application-6809 /LibraryManagement-b2.0/LibraryManagement.csproj": {}
   },
   "projects": {
-    "/Users/chelsie/Desktop/Application-6809 /LibraryManagement/LibraryManagement.csproj": {
+    "/Users/chelsie/Desktop/Application-6809 /LibraryManagement-b2.0/LibraryManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chelsie/Desktop/Application-6809 /LibraryManagement/LibraryManagement.csproj",
+        "projectUniqueName": "/Users/chelsie/Desktop/Application-6809 /LibraryManagement-b2.0/LibraryManagement.csproj",
         "projectName": "LibraryManagement",
-        "projectPath": "/Users/chelsie/Desktop/Application-6809 /LibraryManagement/LibraryManagement.csproj",
+        "projectPath": "/Users/chelsie/Desktop/Application-6809 /LibraryManagement-b2.0/LibraryManagement.csproj",
         "packagesPath": "/Users/chelsie/.nuget/packages/",
-        "outputPath": "/Users/chelsie/Desktop/Application-6809 /LibraryManagement/obj/",
+        "outputPath": "/Users/chelsie/Desktop/Application-6809 /LibraryManagement-b2.0/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/chelsie/.nuget/NuGet/NuGet.Config"
@@ -43,6 +43,26 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -62,6 +82,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [

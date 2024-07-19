@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 using LibraryManagement.Models;
 using LibraryManagement.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using LibraryManagement.Data;
+
 
 namespace LibraryManagement.Controllers
 {
-    public class BookController : Controller
+       public class BookController : Controller
     {
         private readonly AppDbContext _dbContext;
 
@@ -39,6 +41,7 @@ namespace LibraryManagement.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public IActionResult Create(Book book)
         {
             if (ModelState.IsValid)
@@ -47,7 +50,7 @@ namespace LibraryManagement.Controllers
                 ModelState.AddModelError("BookId", "Error: Id repeats.");
                 return View(book);
                 }
-                book.CreatedAt = DateTime.Now;
+                
                 _dbContext.Books.Add(book);
                 _dbContext.SaveChanges();
                 return RedirectToAction("Index");
@@ -57,6 +60,7 @@ namespace LibraryManagement.Controllers
 
         [HttpGet]
         [Route("Book/Edit/{id}")]
+
         public IActionResult Edit(int id){
             var book = _dbContext.Books.Find(id);
             if (book == null){
@@ -81,6 +85,7 @@ namespace LibraryManagement.Controllers
         [HttpPost]
         [Route("Book/Edit/{id}")]
         [ValidateAntiForgeryToken]
+
         public IActionResult Edit(int id, Book book)
         {
             if (!ModelState.IsValid)
@@ -108,7 +113,7 @@ namespace LibraryManagement.Controllers
                 _dbContext.Books.Remove(existingBook);
                 _dbContext.SaveChanges();
 
-                book.CreatedAt = existingBook.CreatedAt; // 保持创建时间一致
+                
                 _dbContext.Books.Add(book);
             }
             else
@@ -133,6 +138,7 @@ namespace LibraryManagement.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+ 
         public IActionResult DeleteConfirmed(int id)
         {
             var book = _dbContext.Books.Find(id);

@@ -7,6 +7,7 @@ public class LibraryBranch{
     [Key]
     public required int LibraryBranchId { get; set; }
     public required string BranchName { get; set; }
-    public DateTime CreatedAt{get; set;}
 }
+
+
 }

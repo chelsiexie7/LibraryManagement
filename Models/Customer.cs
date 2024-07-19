@@ -7,6 +7,5 @@ public class Customer{
     [Key]
     public int CustomerId { get; set; }
     public required string Name { get; set; }
-    public DateTime CreatedAt{get; set;}
 }
 }

@@ -3,9 +3,11 @@ using System.Linq;
 // AuthorController.cs
 using Microsoft.AspNetCore.Mvc;
 using LibraryManagement.Models;
+using LibraryManagement.Data;
+
 
 namespace LibraryManagement.Controllers{
-    public class AuthorController : Controller{
+      public class AuthorController : Controller{
         private readonly AppDbContext _dbContext;
         public AuthorController(AppDbContext dbContext){
         _dbContext = dbContext;
@@ -14,22 +16,25 @@ namespace LibraryManagement.Controllers{
             var authors = _dbContext.Authors.ToList();
             return View(authors);
         }
+      
         public IActionResult Create(){
             return View();
         }
         [HttpPost]
+
         public IActionResult Create(Author author){
             if(_dbContext.Authors.Any(a => a.AuthorId == author.AuthorId)){
                 ModelState.AddModelError("AuthorId", "Error: Id repeats");
                 return View(author);
             }
-            author.CreatedAt = DateTime.Now;
+           
             _dbContext.Authors.Add(author);
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
         [HttpGet]
         [Route("Author/Edit/{id}")]
+
         public IActionResult Edit(int id){
             var author = _dbContext.Authors.Find(id);
             if (author == null){
@@ -40,6 +45,7 @@ namespace LibraryManagement.Controllers{
 
         [HttpPost]
         [Route("Author/Edit/{id}")]
+
          public IActionResult Edit(int id, Author author){
             if (!ModelState.IsValid){
                 return View(author);
@@ -60,7 +66,6 @@ namespace LibraryManagement.Controllers{
                 _dbContext.Authors.Remove(existingAuthor);
                 _dbContext.SaveChanges();
 
-                author.CreatedAt = existingAuthor.CreatedAt; // 保持创建时间一致
                 _dbContext.Authors.Add(author);
             }else{
                 existingAuthor.AuthorId = author.AuthorId; // 更新ID
@@ -70,6 +75,7 @@ namespace LibraryManagement.Controllers{
 
             return RedirectToAction("Index");
         }
+
         public IActionResult Delete(int id){
             var author = _dbContext.Authors.Find(id);
             if (author == null){
@@ -79,6 +85,7 @@ namespace LibraryManagement.Controllers{
         }
 
         [HttpPost, ActionName("Delete")]
+
         public IActionResult DeleteConfirmed(int id){
             var author = _dbContext.Authors.Find(id);
             if (author == null){

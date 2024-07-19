@@ -1,22 +1,177 @@
-html {
-  font-size: 14px;
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+a {
+  color: #e4c6d0;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn-primary {
+  color: #425066;
+  background-color: #e4c6d0;
+  border-color: #e4c6d0;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #425066;
+  background-color: #e4c6d0;
+  border-color: #e4c6d0;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 60px; /* 确保footer的高度 */
+  background-color: #f8f9fa; /* 设置背景颜色 */
 }
 
 body {
-  margin-bottom: 60px;
+  padding-bottom: 30px; /* 确保内容不会被footer遮挡 */
+  
 }
+
+/* Custom styles for the review section */
+.review-section {
+    text-align: center;
+    color: #9B2D30;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.review-section .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 20px 0;
+    color: #9B2D30;
+}
+
+.review-section .author {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #9B2D30;
+}
+
+.review-section .author-subtext {
+    font-size: 1.5rem;
+    color: #9B2D30;
+}
+
+.review-section .reviewers {
+    font-size: 2rem;
+    font-weight: bold; /* Make the reviewers bold */
+    color: #d06f72;
+    margin: 10px 0;
+}
+
+.review-section hr {
+    border: 0;
+    height: 1px;
+    background-color: #9B2D30;
+    opacity: 0.5;
+    margin: 20px 0;
+}
+
+/* Navbar custom styles */
+.navbar {
+    background-color: #9B2D30 !important;
+    color: #ffffff !important;
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+
+
+.text-oscar-color {
+    color: #9B2D30;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+body {
+  padding-bottom: 30px;
+}
+
+/* Add this at the end of site.css file */
+
+.background-color {
+  background-color: #9B2D30;
+  display: flex;
+  flex: 1;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+}
+
+/* Add this at the end of site.css file */
+/*
+.background-image {
+  background-image: url('https://i.ibb.co/Y02HRCF/high-resolution-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; // Full viewport height 
+  width: 100%;
+}
+*/
+
+
+/* Add the social button styles to site.css */
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+  color: white;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.btn-google {
+  background-color: #dd4b39;
+  border-color: #dd4b39;
+}
+
+.btn-social .fa {
+  margin-right: 10px;
+}
+

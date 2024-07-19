@@ -3,9 +3,12 @@ using System.Linq;
 // CustomerController.cs
 using Microsoft.AspNetCore.Mvc;
 using LibraryManagement.Models;
+using LibraryManagement.Data;
+
 
 namespace LibraryManagement.Controllers
 {
+
     public class CustomerController : Controller
     {
         private readonly AppDbContext _dbContext;
@@ -33,7 +36,7 @@ namespace LibraryManagement.Controllers
                 ModelState.AddModelError("CustomerId", "Error: Id repeats.");
                 return View(customer);
                 }
-            customer.CreatedAt = DateTime.Now;
+            
             _dbContext.Customers.Add(customer);
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
@@ -77,7 +80,7 @@ namespace LibraryManagement.Controllers
                 _dbContext.Customers.Remove(existingCustomer);
                 _dbContext.SaveChanges();
 
-                customer.CreatedAt = existingCustomer.CreatedAt; // 保持创建时间一致
+                
                 _dbContext.Customers.Add(customer);
             }
             else
